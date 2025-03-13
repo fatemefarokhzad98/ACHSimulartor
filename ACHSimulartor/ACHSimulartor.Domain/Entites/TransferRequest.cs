@@ -10,13 +10,17 @@ namespace ACHSimulartor.Domain.Entites
 {
     public class TransferRequest
     {
+        public TransferRequest()
+        {
+            CreatedAt = DateTime.Now;
+        }
         public int Id { get; set; }
         public decimal Price { get; set; }
         public string FromShebaNumber { get; set; }
-        public string ToShebaNumber { get; set; }
-        public string Note { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public EnumStaus Staus { get; set; }
+        public string ToShebaNumber { get; set; } 
+        public string? Note { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public EnumStaus? Staus { get; set; }
 
 
     }
