@@ -18,7 +18,7 @@ namespace ACHSimulartor.Domain.Entites
         public string? Note { get; set; }
         public DateTime? CreatedAt { get; set; } 
         public EnumStaus? Staus { get; set; }
-
+        public AccountUser AccountUser { get; set; }
 
     }
 }
