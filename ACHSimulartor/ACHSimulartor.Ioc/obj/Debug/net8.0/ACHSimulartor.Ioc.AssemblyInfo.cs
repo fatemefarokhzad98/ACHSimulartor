@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ACHSimulartor.Ioc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+106502571053cd8f12b0b3b95966d3f3a45ea85a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1af80653e47cd55a38614e69509486aff8f5001")]
 [assembly: System.Reflection.AssemblyProductAttribute("ACHSimulartor.Ioc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ACHSimulartor.Ioc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

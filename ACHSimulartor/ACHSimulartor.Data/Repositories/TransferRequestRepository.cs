@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACHSimulartor.Data.Repositories
 {
-  public  class TransferRequestRepository: ITransferRequestRepository
+    public class TransferRequestRepository : ITransferRequestRepository
     {
     }
 }
