@@ -12,9 +12,9 @@ namespace ACHSimulartor.Domain.Interfaces
     {
 
          Task<int> CreateTransferRequestAsync(TransferRequest model);
-        Task<bool> UpdateTransferRequestStatusAsync(TransferRequest model);
-        Task<List<TransferRequest>> GetAllTransferRequestsAsync();
-        Task<TransferRequest> GetTransferRequestByIdAsync(int id);
+        Task<bool?> UpdateTransferRequestStatusAsync(TransferRequest model);
+        Task<List<TransferRequest>?> GetAllTransferRequestsAsync();
+        Task<TransferRequest?> GetTransferRequestByIdAsync(int id);
 
     }
 }

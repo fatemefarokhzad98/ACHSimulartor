@@ -1,6 +1,7 @@
 ﻿using ACHSimulartor.Data.Context;
 using ACHSimulartor.Domain.Entites;
 using ACHSimulartor.Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,24 +12,32 @@ namespace ACHSimulartor.Data.Repositories
 {
     public class TransferRequestRepository(ACHSimulartorDbContext _context) : ITransferRequestRepository
     {
-        public Task<int> CreateTransferRequestAsync(TransferRequest model)
+        public async Task<int> CreateTransferRequestAsync(TransferRequest model)
         {
-            throw new NotImplementedException();
+            await _context.TransferRequests.AddAsync(model);
+            await _context.SaveChangesAsync();
+            return model.Id;
         }
 
-        public Task<List<TransferRequest>> GetAllTransferRequestsAsync()
+        public async Task<List<TransferRequest>?> GetAllTransferRequestsAsync()
         {
-            throw new NotImplementedException();
+            return await _context.TransferRequests.AsNoTracking().ToListAsync();
         }
 
-        public Task<TransferRequest> GetTransferRequestByIdAsync(int id)
+        public async Task<TransferRequest?> GetTransferRequestByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _context.TransferRequests.AsNoTracking().Where(x => x.Id == id).FirstOrDefaultAsync();
         }
 
-        public Task<bool> UpdateTransferRequestStatusAsync(TransferRequest model)
+        public async Task<bool?> UpdateTransferRequestStatusAsync(TransferRequest model)
         {
-            throw new NotImplementedException();
+            TransferRequest? entity = await _context.TransferRequests.Where(x => x.Id == model.Id).FirstOrDefaultAsync();
+            if (entity is null)
+                return false;
+            entity.Staus = model.Staus;
+            _context.TransferRequests.Update(entity);
+            await _context.SaveChangesAsync();
+            return true;
         }
     }
 }
