@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NITC_Contact.Domain.ViewModels.Common
+namespace ACHSimulartor.Domain.ViewModels.Common
 {
     public class BasePaging<T>
     {
@@ -13,7 +13,7 @@ namespace NITC_Contact.Domain.ViewModels.Common
             Page = 1;
             TakeEntity = 2;
             HowManyShowPageAfterAndBefore = 2;
-            Entities = new List<T>();
+            Entities = [];
         }
 
         public int Page { get; set; }
