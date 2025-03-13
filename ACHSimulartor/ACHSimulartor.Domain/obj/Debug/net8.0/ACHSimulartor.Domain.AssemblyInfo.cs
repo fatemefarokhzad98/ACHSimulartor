@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ACHSimulartor.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a44cf4845502aff680a8a1c75f235ffa44483884")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8eab0f94af100e49a3fdec469f541c41efffed59")]
 [assembly: System.Reflection.AssemblyProductAttribute("ACHSimulartor.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ACHSimulartor.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
