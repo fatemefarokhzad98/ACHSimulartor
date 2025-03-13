@@ -17,7 +17,7 @@ namespace EndPoint.Api.Extentions
             #region Db Context
 
             builder.Services.AddDbContext<ACHSimulartorDbContext>(option =>
-                option.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionStrings"))
+                option.UseSqlServer(builder.Configuration.GetConnectionString("Database"))
             );
 
             #endregion

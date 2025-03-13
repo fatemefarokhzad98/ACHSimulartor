@@ -13,6 +13,6 @@ namespace ACHSimulartor.Domain.Shared
     }
     public static class ErrorMessages
     {
-        public const string SuccessfullyDone = "Error Message";
+        public const string OperationFailedError = "Error Message";
     }
 }
