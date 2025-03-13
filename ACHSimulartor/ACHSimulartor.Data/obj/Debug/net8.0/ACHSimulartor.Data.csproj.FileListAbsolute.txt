@@ -1,0 +1,16 @@
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\bin\Debug\net8.0\ACHSimulartor.Data.deps.json
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\bin\Debug\net8.0\ACHSimulartor.Data.dll
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\bin\Debug\net8.0\ACHSimulartor.Data.pdb
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\bin\Debug\net8.0\ACHSimulartor.Domain.dll
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\bin\Debug\net8.0\ACHSimulartor.Domain.pdb
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\obj\Debug\net8.0\ACHSimulartor.Data.csproj.AssemblyReference.cache
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\obj\Debug\net8.0\ACHSimulartor.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\obj\Debug\net8.0\ACHSimulartor.Data.AssemblyInfoInputs.cache
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\obj\Debug\net8.0\ACHSimulartor.Data.AssemblyInfo.cs
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\obj\Debug\net8.0\ACHSimulartor.Data.csproj.CoreCompileInputs.cache
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\obj\Debug\net8.0\ACHSimulartor.Data.sourcelink.json
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\obj\Debug\net8.0\ACHSimul.5B93BDA7.Up2Date
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\obj\Debug\net8.0\ACHSimulartor.Data.dll
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\obj\Debug\net8.0\refint\ACHSimulartor.Data.dll
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\obj\Debug\net8.0\ACHSimulartor.Data.pdb
+C:\Users\SarayeTell\Desktop\ACHSimulartor\ACHSimulartor\ACHSimulartor.Data\obj\Debug\net8.0\ref\ACHSimulartor.Data.dll
