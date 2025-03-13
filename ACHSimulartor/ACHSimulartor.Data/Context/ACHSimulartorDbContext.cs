@@ -32,9 +32,7 @@ namespace ACHSimulartor.Data.Context
            .Property(b => b.ToShebaNumber)
            .IsRequired()
            .HasMaxLength(26);
-            modelBuilder.Entity<TransferRequest>()
-            .Property(b => b.CreatedAt)
-             .IsRequired();
+           
             modelBuilder.Entity<TransferRequest>()
             .Property(b => b.Price)
              .IsRequired();

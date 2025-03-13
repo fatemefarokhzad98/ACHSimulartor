@@ -4,6 +4,7 @@ using ACHSimulartor.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ACHSimulartor.Data.Migrations
 {
     [DbContext(typeof(ACHSimulartorDbContext))]
-    partial class ACHSimulartorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250313192737_UpdateCreatedAt")]
+    partial class UpdateCreatedAt
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
