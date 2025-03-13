@@ -8,10 +8,11 @@ namespace ACHSimulartor.Domain.Shared
 {
     public static class SuccessMessages
     {
+        public const string SuccessfullyDone = "Request is saved successfully and is in pending status";
 
     }
     public static class ErrorMessages
     {
-
+        public const string SuccessfullyDone = "Error Message";
     }
 }
