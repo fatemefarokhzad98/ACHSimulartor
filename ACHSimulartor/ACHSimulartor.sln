@@ -1,11 +1,77 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ACHSimulartor.Data", "ACHSimulartor.Data", "{48D83C40-D059-42F4-9061-0842BBAAE1D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ACHSimulartor.Ioc", "ACHSimulartor.Ioc", "{6D94FC5E-E772-4AF2-95F7-1CF8BADDF7E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ACHSimulartor.Domain", "ACHSimulartor.Domain", "{69C336BF-8EFF-4E6E-BA1E-665717EAB914}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ACHSimulartor.Application", "ACHSimulartor.Application", "{61AC4D4A-DE64-4973-B46E-F6A7A979E7DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHSimulartor.Application", "ACHSimulartor.Application\ACHSimulartor.Application.csproj", "{EC40B594-6117-4EEE-B01F-FF5F82F80783}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHSimulartor.Data", "ACHSimulartor.Data\ACHSimulartor.Data.csproj", "{CE83216F-4022-4F96-A921-DB4F933E30E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHSimulartor.Domain", "ACHSimulartor.Domain\ACHSimulartor.Domain.csproj", "{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACHSimulartor.Ioc", "ACHSimulartor.Ioc\ACHSimulartor.Ioc.csproj", "{CB26FD67-2EED-4DDA-A3A0-B24FC80CE2F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ACHSimulartor.EndPoint", "ACHSimulartor.EndPoint", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EndPoint.Api", "EndPoint.Api", "{766156E6-2BD7-4C76-9752-F494514B1BF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EndPoint.Mvc", "EndPoint.Mvc", "{5771F932-28AF-42D2-B22E-869E38C3F02E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndPoint.Mvc", "ACHSimulartor.EndPoint\EndPoint.Mvc\EndPoint.Mvc.csproj", "{23749587-5E0B-485C-BF8E-A9EA1AF16C62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndPoint.Api", "ACHSimulartor.EndPoint\EndPoint.Api\EndPoint.Api.csproj", "{34642B8D-3721-4C88-B1E2-C905EE92F0DE}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC40B594-6117-4EEE-B01F-FF5F82F80783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC40B594-6117-4EEE-B01F-FF5F82F80783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC40B594-6117-4EEE-B01F-FF5F82F80783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC40B594-6117-4EEE-B01F-FF5F82F80783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE83216F-4022-4F96-A921-DB4F933E30E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE83216F-4022-4F96-A921-DB4F933E30E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE83216F-4022-4F96-A921-DB4F933E30E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE83216F-4022-4F96-A921-DB4F933E30E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB26FD67-2EED-4DDA-A3A0-B24FC80CE2F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB26FD67-2EED-4DDA-A3A0-B24FC80CE2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB26FD67-2EED-4DDA-A3A0-B24FC80CE2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB26FD67-2EED-4DDA-A3A0-B24FC80CE2F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23749587-5E0B-485C-BF8E-A9EA1AF16C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23749587-5E0B-485C-BF8E-A9EA1AF16C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23749587-5E0B-485C-BF8E-A9EA1AF16C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23749587-5E0B-485C-BF8E-A9EA1AF16C62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34642B8D-3721-4C88-B1E2-C905EE92F0DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34642B8D-3721-4C88-B1E2-C905EE92F0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34642B8D-3721-4C88-B1E2-C905EE92F0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34642B8D-3721-4C88-B1E2-C905EE92F0DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC40B594-6117-4EEE-B01F-FF5F82F80783} = {61AC4D4A-DE64-4973-B46E-F6A7A979E7DA}
+		{CE83216F-4022-4F96-A921-DB4F933E30E3} = {48D83C40-D059-42F4-9061-0842BBAAE1D8}
+		{3BA114D2-6FC2-421B-8423-C61BC19EEC2A} = {69C336BF-8EFF-4E6E-BA1E-665717EAB914}
+		{CB26FD67-2EED-4DDA-A3A0-B24FC80CE2F9} = {6D94FC5E-E772-4AF2-95F7-1CF8BADDF7E4}
+		{766156E6-2BD7-4C76-9752-F494514B1BF8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5771F932-28AF-42D2-B22E-869E38C3F02E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{23749587-5E0B-485C-BF8E-A9EA1AF16C62} = {5771F932-28AF-42D2-B22E-869E38C3F02E}
+		{34642B8D-3721-4C88-B1E2-C905EE92F0DE} = {766156E6-2BD7-4C76-9752-F494514B1BF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EAEA1448-A830-4E32-82B1-0AEB02536C55}

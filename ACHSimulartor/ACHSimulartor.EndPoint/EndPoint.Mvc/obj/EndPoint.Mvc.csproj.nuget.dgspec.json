@@ -1,0 +1,357 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.EndPoint\\EndPoint.Mvc\\EndPoint.Mvc.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Application\\ACHSimulartor.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Application\\ACHSimulartor.Application.csproj",
+        "projectName": "ACHSimulartor.Application",
+        "projectPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Application\\ACHSimulartor.Application.csproj",
+        "packagesPath": "C:\\Users\\SarayeTell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\SarayeTell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\ACHSimulartor.Data.csproj": {
+                "projectPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\ACHSimulartor.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\ACHSimulartor.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\ACHSimulartor.Data.csproj",
+        "projectName": "ACHSimulartor.Data",
+        "projectPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\ACHSimulartor.Data.csproj",
+        "packagesPath": "C:\\Users\\SarayeTell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\SarayeTell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj": {
+                "projectPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj",
+        "projectName": "ACHSimulartor.Domain",
+        "projectPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj",
+        "packagesPath": "C:\\Users\\SarayeTell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\SarayeTell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.EndPoint\\EndPoint.Mvc\\EndPoint.Mvc.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.EndPoint\\EndPoint.Mvc\\EndPoint.Mvc.csproj",
+        "projectName": "EndPoint.Mvc",
+        "projectPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.EndPoint\\EndPoint.Mvc\\EndPoint.Mvc.csproj",
+        "packagesPath": "C:\\Users\\SarayeTell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.EndPoint\\EndPoint.Mvc\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\SarayeTell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Ioc\\ACHSimulartor.Ioc.csproj": {
+                "projectPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Ioc\\ACHSimulartor.Ioc.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Ioc\\ACHSimulartor.Ioc.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Ioc\\ACHSimulartor.Ioc.csproj",
+        "projectName": "ACHSimulartor.Ioc",
+        "projectPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Ioc\\ACHSimulartor.Ioc.csproj",
+        "packagesPath": "C:\\Users\\SarayeTell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Ioc\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\SarayeTell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Application\\ACHSimulartor.Application.csproj": {
+                "projectPath": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Application\\ACHSimulartor.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
