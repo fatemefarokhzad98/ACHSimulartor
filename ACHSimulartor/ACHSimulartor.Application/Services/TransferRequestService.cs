@@ -213,7 +213,7 @@ namespace ACHSimulartor.Application.Services
         private async Task<Result> ValidationCreateTransferRequest(CreateTransferRequestDto model)
         {
             if (model is null)
-                return Result.Failure(ErrorMessages.NotFoundError);
+                return Result.Failure(ErrorMessages.BadRequestError);
             if (IsValidShebaNumber(model.FromShebaNumber) == false || IsValidShebaNumber(model.ToShebaNumber) == false)
                 return Result.Failure(ErrorMessages.ShebaIncorrectedError);
             if (await _AccountUser.HasSufficientBalanceAsync(model.FromShebaNumber, model.Price) == false)
