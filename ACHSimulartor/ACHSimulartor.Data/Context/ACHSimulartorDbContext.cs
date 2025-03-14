@@ -16,6 +16,7 @@ namespace ACHSimulartor.Data.Context
         #region DbSet
         public DbSet<TransferRequest> TransferRequests { get; set; }
         public DbSet<AccountUser> AccountUsers { get; set; }
+        public DbSet<Bank> Banks { get; set; }
 
         #endregion
 
@@ -38,6 +39,9 @@ namespace ACHSimulartor.Data.Context
             modelBuilder.Entity<TransferRequest>()
             .Property(b => b.Price)
              .IsRequired();
+            modelBuilder.Entity<TransferRequest>()
+            .Property(b => b.Note)
+             .IsRequired();
             #endregion
 
             #region AccountUserConfig
@@ -49,8 +53,20 @@ namespace ACHSimulartor.Data.Context
            .HasMaxLength(26);
             modelBuilder.Entity<AccountUser>()
             .Property(b => b.AccountBalanc)
-           .IsRequired();
+           .HasDefaultValue(0);
 
+            #endregion
+            #region Bank
+            modelBuilder.Entity<Bank>()
+            .HasKey(x => x.BankCode);
+            modelBuilder.Entity<Bank>()
+           .Property(x => x.BankCode)
+           .HasMaxLength(3)
+           .IsRequired();
+            modelBuilder.Entity<Bank>()
+            .Property(x => x.BankAccountBalanc)
+            .HasDefaultValue(0);
+           
             #endregion
 
             #region Relation
@@ -58,7 +74,10 @@ namespace ACHSimulartor.Data.Context
            .HasOne(x => x.AccountUser)
            .WithMany(x => x.TransferRequests)
            .HasForeignKey(x => x.FromShebaNumber);
-
+            modelBuilder.Entity<TransferRequest>()
+           .HasOne(x => x.Bank)
+           .WithMany(x => x.TransferRequests)
+           .HasForeignKey(x => x.BankCode);
             #endregion
 
             base.OnModelCreating(modelBuilder);

@@ -26,7 +26,7 @@ namespace ACHSimulartor.Data.Repositories
 
         public async Task<TransferRequest?> GetTransferRequestByIdAsync(int id)
         {
-            return await _context.TransferRequests.AsNoTracking().Where(x => x.Id == id).FirstOrDefaultAsync();
+            return await _context.TransferRequests.Where(x => x.Id == id).AsNoTracking().FirstOrDefaultAsync();
         }
 
         public async Task<bool?> UpdateTransferRequestStatusAsync(TransferRequest model)
