@@ -21,12 +21,12 @@ namespace ACHSimulartor.Data.Repositories
 
         public async Task<List<TransferRequest>?> GetAllTransferRequestsAsync()
         {
-            return await _context.TransferRequests.AsNoTracking().ToListAsync();
+            return await _context.TransferRequests.Include(x=>x.Transactions).Include(x=>x.User).AsNoTracking().ToListAsync();
         }
 
         public async Task<TransferRequest?> GetTransferRequestByIdAsync(int id)
         {
-            return await _context.TransferRequests.Where(x => x.Id == id).AsNoTracking().FirstOrDefaultAsync();
+            return await _context.TransferRequests.Include(x => x.Transactions).Include(x => x.User).AsNoTracking().Where(x => x.Id == id).FirstOrDefaultAsync();
         }
 
         public async Task<bool?> UpdateTransferRequestStatusAsync(TransferRequest model)
@@ -34,7 +34,7 @@ namespace ACHSimulartor.Data.Repositories
             TransferRequest? entity = await _context.TransferRequests.Where(x => x.Id == model.Id).FirstOrDefaultAsync();
             if (entity is null)
                 return false;
-            entity.Staus = model.Staus;
+            entity.Status = model.Status;
             _context.TransferRequests.Update(entity);
             await _context.SaveChangesAsync();
             return true;

@@ -1,4 +1,5 @@
 ﻿using ACHSimulartor.Domain.Entites;
+using ACHSimulartor.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace ACHSimulartor.Domain.Interfaces
 {
-   public interface IBankRepository
+    public interface ITransactionRepository
     {
-        Task<bool> UpdateBankAccountBalanceAsync(Bank model);
-        Task<Bank?> GetBankByBankCodeAsync(int bankCode);
+        Task<int> CreateTransactionAsync(Transaction model);
+
+      
     }
 }

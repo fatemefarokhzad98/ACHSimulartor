@@ -15,6 +15,6 @@ namespace ACHSimulartor.Domain.Dtos
         public string ToShebaNumber { get; set; }
         public string? Note { get; set; }
         public DateTime? CreatedAt { get; set; }
-        public EnumStaus? Staus { get; set; }
+        public EnumStatus? Status { get; set; }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACHSimulartor.Domain.Enums
 {
-    public enum EnumStaus
+    public enum EnumStatus
     {
         pending,
         confirmed,

@@ -15,8 +15,8 @@ namespace ACHSimulartor.Data.Context
     {
         #region DbSet
         public DbSet<TransferRequest> TransferRequests { get; set; }
-        public DbSet<AccountUser> AccountUsers { get; set; }
-        public DbSet<Bank> Banks { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<User> Users { get; set; }
 
         #endregion
 
@@ -45,42 +45,45 @@ namespace ACHSimulartor.Data.Context
              .IsRequired();
             #endregion
 
-            #region AccountUserConfig
-            modelBuilder.Entity<AccountUser>()
-            .HasKey(x => x.ShebaNumber);
-            modelBuilder.Entity<AccountUser>()
-           .Property(b => b.ShebaNumber)
+            #region UserConfig
+            modelBuilder.Entity<User>()
+            .HasKey(x => x.UserShebaNumber);
+            modelBuilder.Entity<User>()
+           .Property(b => b.UserShebaNumber)
            .IsRequired()
            .HasMaxLength(26);
-            modelBuilder.Entity<AccountUser>()
+            modelBuilder.Entity<User>()
             .Property(b => b.AccountBalance)
             .HasColumnType("decimal(18, 2)")
             .HasDefaultValue(0);
-
+            
             #endregion
-            #region Bank
-            modelBuilder.Entity<Bank>()
-            .HasKey(x => x.BankCode);
-            modelBuilder.Entity<Bank>()
-           .Property(x => x.BankCode)
-           .HasMaxLength(3)
-           .IsRequired();
-            modelBuilder.Entity<Bank>()
-            .Property(x => x.BankAccountBalance)
+
+            #region Transaction
+            modelBuilder.Entity<Transaction>()
+            .HasKey(x => x.Id);
+            modelBuilder.Entity<Transaction>()
+            .Property(x => x.Price)
             .HasColumnType("decimal(18, 2)")
             .HasDefaultValue(0);
-           
+
             #endregion
 
             #region Relation
             modelBuilder.Entity<TransferRequest>()
-           .HasOne(x => x.AccountUser)
+           .HasOne(x => x.User)
            .WithMany(x => x.TransferRequests)
-           .HasForeignKey(x => x.FromShebaNumber);
-            modelBuilder.Entity<TransferRequest>()
-           .HasOne(x => x.Bank)
-           .WithMany(x => x.TransferRequests)
-           .HasForeignKey(x => x.BankCode);
+            .HasForeignKey(x => x.UserShebaNumber);
+
+            modelBuilder.Entity<Transaction>()
+             .HasOne(x => x.TransferRequest)
+            .WithMany(x => x.Transactions)
+            .HasForeignKey(x => x.TransferRequestId);
+
+            modelBuilder.Entity<Transaction>()
+           .HasOne(x => x.User)
+           .WithMany(x => x.Transactions)
+           .HasForeignKey(x => x.UserShebaNumber);
             #endregion
 
             base.OnModelCreating(modelBuilder);

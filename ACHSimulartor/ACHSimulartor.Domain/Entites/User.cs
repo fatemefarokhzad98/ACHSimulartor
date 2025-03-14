@@ -1,5 +1,4 @@
-﻿using ACHSimulartor.Domain.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace ACHSimulartor.Domain.Entites
 {
-    public class Bank
+    public class User
     {
-        public int BankCode { get; set; }
+        public string UserShebaNumber { get; set; }
+        public decimal AccountBalance { get; set; }
         public decimal BankAccountBalance { get; set; }
+        public List<Transaction> Transactions { get; set; }
         public List<TransferRequest> TransferRequests { get; set; }
 
     }
