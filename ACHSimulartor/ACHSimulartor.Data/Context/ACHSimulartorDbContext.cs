@@ -53,10 +53,14 @@ namespace ACHSimulartor.Data.Context
            .IsRequired()
            .HasMaxLength(26);
             modelBuilder.Entity<User>()
-            .Property(b => b.AccountBalance)
-            .HasColumnType("decimal(18, 2)")
-            .HasDefaultValue(0);
-            
+          .Property(b => b.BankAccountBalance)
+           .HasDefaultValue(0)
+          .HasPrecision(18, 2);
+
+            modelBuilder.Entity<User>()
+           .Property(b => b.AccountBalance)
+           .HasDefaultValue(0)
+          .HasPrecision(18, 2);
             #endregion
 
             #region Transaction
@@ -74,6 +78,7 @@ namespace ACHSimulartor.Data.Context
            .HasOne(x => x.User)
            .WithMany(x => x.TransferRequests)
             .HasForeignKey(x => x.UserShebaNumber);
+          
 
             modelBuilder.Entity<Transaction>()
              .HasOne(x => x.TransferRequest)
@@ -84,6 +89,12 @@ namespace ACHSimulartor.Data.Context
            .HasOne(x => x.User)
            .WithMany(x => x.Transactions)
            .HasForeignKey(x => x.UserShebaNumber);
+
+
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.Restrict;
+            }
             #endregion
 
             base.OnModelCreating(modelBuilder);

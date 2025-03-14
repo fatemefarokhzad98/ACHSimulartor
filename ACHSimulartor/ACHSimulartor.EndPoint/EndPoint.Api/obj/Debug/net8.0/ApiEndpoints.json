@@ -1,0 +1,76 @@
+[
+  {
+    "ContainingType": "EndPoint.Api.Controllers.TransferRequestController",
+    "Method": "CancledTransfer",
+    "RelativePath": "api/TransferRequest/CancledTransfer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EndPoint.Api.Controllers.TransferRequestController",
+    "Method": "ConfirmedTransfer",
+    "RelativePath": "api/TransferRequest/ConfirmedTransfer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EndPoint.Api.Controllers.TransferRequestController",
+    "Method": "Create",
+    "RelativePath": "api/TransferRequest/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ACHSimulartor.Domain.Dtos.CreateTransferRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EndPoint.Api.Controllers.TransferRequestController",
+    "Method": "DetailRequest",
+    "RelativePath": "api/TransferRequest/DetailRequest",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EndPoint.Api.Controllers.TransferRequestController",
+    "Method": "List",
+    "RelativePath": "api/TransferRequest/List",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

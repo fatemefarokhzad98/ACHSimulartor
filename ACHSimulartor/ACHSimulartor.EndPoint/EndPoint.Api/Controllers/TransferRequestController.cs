@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace EndPoint.Api.Controllers
 {
+    [Route("api/[controller]/[action]")]
     [ApiController]
-    [Route("api/[controller]")]
     public class TransferRequestController(ITransferRequestService _service) : Controller
     {
+        [HttpGet]
         public async Task<IActionResult> List()
         {
             var models = await _service.GetAllTransferRequestsAsync();
@@ -23,6 +24,7 @@ namespace EndPoint.Api.Controllers
             }
             return JsonResponseStatus.Success(models.Value,models.Message);
         }
+        [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateTransferRequestDto model)
         {
             var resultModel = await _service.CreateTransferRequestAsync(model);
@@ -37,6 +39,7 @@ namespace EndPoint.Api.Controllers
                 return JsonResponseStatus.Success(SuccessMessages.SuccessfullyDone);
             return JsonResponseStatus.Success(resultModel.Message);
         }
+        [HttpGet]
         public async Task<IActionResult> CancledTransfer(int requestId)
         {
             var resultModel = await _service.CanceledTransferRequestAsync(requestId);
@@ -51,6 +54,7 @@ namespace EndPoint.Api.Controllers
                 return JsonResponseStatus.Success(SuccessMessages.CancledRequestSuccessfullyDone);
             return JsonResponseStatus.Success(resultModel.Message);
         }
+        [HttpGet]
         public async Task<IActionResult> ConfirmedTransfer(int requestId)
         {
             var resultModel = await _service.ConfirmedTransferRequestAsync(requestId);
@@ -65,6 +69,7 @@ namespace EndPoint.Api.Controllers
                 return JsonResponseStatus.Success(SuccessMessages.ConfirmedRequestSuccessfullyDone);
             return JsonResponseStatus.Success(resultModel.Message);
         }
+        [HttpGet]
         public async Task<IActionResult> DetailRequest(int requestId)
         {
             var resultModel = await _service.GetTransferRequestAsync(requestId);
