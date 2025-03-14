@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/TransferRequest/List": {
+    "/api/TransferRequest/GetList": {
       "get": {
         "tags": [
           "TransferRequest"
@@ -17,7 +17,7 @@
         }
       }
     },
-    "/api/TransferRequest/Create": {
+    "/api/TransferRequest/Csreate": {
       "post": {
         "tags": [
           "TransferRequest"
@@ -55,7 +55,7 @@
         ],
         "parameters": [
           {
-            "name": "requestId",
+            "name": "id",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -77,7 +77,7 @@
         ],
         "parameters": [
           {
-            "name": "requestId",
+            "name": "id",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -92,14 +92,14 @@
         }
       }
     },
-    "/api/TransferRequest/DetailRequest": {
+    "/api/TransferRequest/GetRequest": {
       "get": {
         "tags": [
           "TransferRequest"
         ],
         "parameters": [
           {
-            "name": "requestId",
+            "name": "id",
             "in": "query",
             "schema": {
               "type": "integer",
@@ -118,6 +118,12 @@
   "components": {
     "schemas": {
       "CreateTransferRequestDto": {
+        "required": [
+          "fromShebaNumber",
+          "note",
+          "price",
+          "toShebaNumber"
+        ],
         "type": "object",
         "properties": {
           "price": {
@@ -125,16 +131,19 @@
             "format": "double"
           },
           "fromShebaNumber": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "IR[0-9]{24}",
+            "type": "string"
           },
           "toShebaNumber": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "IR[0-9]{24}",
+            "type": "string"
           },
           "note": {
+            "minLength": 1,
             "type": "string",
-            "nullable": true
+            "format": "string"
           }
         },
         "additionalProperties": false

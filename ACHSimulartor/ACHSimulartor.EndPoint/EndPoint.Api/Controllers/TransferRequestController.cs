@@ -1,89 +1,82 @@
 ﻿using ACHSimulartor.Application.Interfaces;
 using ACHSimulartor.Domain.Dtos;
 using ACHSimulartor.Domain.Shared;
-using EndPoint.Api.HttpManager;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace EndPoint.Api.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class TransferRequestController(ITransferRequestService _service) : Controller
+    public class TransferRequestController(ITransferRequestService transferRequestService) : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult> List()
+        public async Task<IActionResult> GetAll()
         {
-            var models = await _service.GetAllTransferRequestsAsync();
+            var models = await transferRequestService.GetAllTransferRequestsAsync();
             if (models.IsFailure)
             {
-                if(models.Message is null)
-                    return JsonResponseStatus.NotFound(ErrorMessages.RequestNotFoundError);
-                return JsonResponseStatus.NotFound(models.Message);
-
+                if (models.Message is null)
+                    return NotFound(models.Message);
+                return NotFound(ErrorMessages.RequestNotFoundError);
             }
-            return JsonResponseStatus.Success(models.Value,models.Message);
+
+            return Ok(models);
         }
+
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateTransferRequestDto model)
         {
-            var resultModel = await _service.CreateTransferRequestAsync(model);
+            var resultModel = await transferRequestService.CreateTransferRequestAsync(model);
             if (resultModel.IsFailure)
             {
                 if (resultModel.Message is null)
-                    return JsonResponseStatus.BadRequest(ErrorMessages.BadRequestError);
-                return JsonResponseStatus.BadRequest(resultModel.Message);
-
+                    return BadRequest(ErrorMessages.BadRequestError);
+                return BadRequest(resultModel.Message);
             }
-            if(resultModel.Message is null)
-                return JsonResponseStatus.Success(SuccessMessages.SuccessfullyDone);
-            return JsonResponseStatus.Success(resultModel.Message);
+
+            return Ok(resultModel);
         }
-        [HttpGet]
-        public async Task<IActionResult> CancledTransfer(int requestId)
+
+        [HttpPut("/cancel/{id:int}")]
+        public async Task<IActionResult> CancelTransfer(int id)
         {
-            var resultModel = await _service.CanceledTransferRequestAsync(requestId);
+            var resultModel = await transferRequestService.CanceledTransferRequestAsync(id);
             if (resultModel.IsFailure)
             {
                 if (resultModel.Message is null)
-                    return JsonResponseStatus.Error(ErrorMessages.CancledRequestError);
-                return JsonResponseStatus.Error(resultModel.Message);
-
+                    return NotFound(ErrorMessages.NotFoundError);
+                return NotFound(resultModel.Message);
             }
-            if (resultModel.Message is null)
-                return JsonResponseStatus.Success(SuccessMessages.CancledRequestSuccessfullyDone);
-            return JsonResponseStatus.Success(resultModel.Message);
+
+            return Ok(resultModel);
         }
-        [HttpGet]
-        public async Task<IActionResult> ConfirmedTransfer(int requestId)
+
+        [HttpPut("/confirm/{id:int}")]
+        public async Task<IActionResult> ConfirmTransfer(int id)
         {
-            var resultModel = await _service.ConfirmedTransferRequestAsync(requestId);
+            var resultModel = await transferRequestService.ConfirmedTransferRequestAsync(id);
             if (resultModel.IsFailure)
             {
                 if (resultModel.Message is null)
-                    return JsonResponseStatus.Error(ErrorMessages.ConfirmedRequestError);
-                return JsonResponseStatus.Error(resultModel.Message);
-
+                    return BadRequest(ErrorMessages.ConfirmedRequestError);
+                return BadRequest(resultModel.Message);
             }
-            if (resultModel.Message is null)
-                return JsonResponseStatus.Success(SuccessMessages.ConfirmedRequestSuccessfullyDone);
-            return JsonResponseStatus.Success(resultModel.Message);
+
+            return Ok(resultModel);
         }
-        [HttpGet]
-        public async Task<IActionResult> DetailRequest(int requestId)
+
+        [HttpGet("/{id:int}")]
+        public async Task<IActionResult> GetRequest(int id)
         {
-            var resultModel = await _service.GetTransferRequestAsync(requestId);
+            var resultModel = await transferRequestService.GetTransferRequestAsync(id);
             if (resultModel.IsFailure)
             {
                 if (resultModel.Message is null)
-                    return JsonResponseStatus.NotFound(ErrorMessages.RequestNotFoundError);
-                return JsonResponseStatus.NotFound(resultModel.Message);
-
+                    return NotFound(ErrorMessages.RequestNotFoundError);
+                return NotFound(resultModel.Message);
             }
-            if (resultModel.Message is null)
-                return JsonResponseStatus.Success(resultModel.Value,SuccessMessages.GetRequestSuccessfullyDone);
-            return JsonResponseStatus.Success(resultModel.Value,resultModel.Message);
 
+            return Ok(resultModel);
         }
     }
 }

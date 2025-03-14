@@ -4,15 +4,6 @@ using ACHSimulartor.Domain.Enums;
 using ACHSimulartor.Domain.Interfaces;
 using ACHSimulartor.Domain.Shared;
 using EntityUsing = ACHSimulartor.Domain.Entites;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
-using ACHSimulartor.Domain.Entites;
-
 namespace ACHSimulartor.Application.Services
 {
     public class TransferRequestService(ITransferRequestRepository _transferRequest, IUserRepository _AccountUser, ITransactionRepository _transaction) : ITransferRequestService
@@ -213,6 +204,8 @@ namespace ACHSimulartor.Application.Services
         private async Task<Result> ValidationCreateTransferRequest(CreateTransferRequestDto model)
         {
             if (model is null)
+                return Result.Failure(ErrorMessages.BadRequestError);
+         if(model.Price ==0)
                 return Result.Failure(ErrorMessages.BadRequestError);
             if (IsValidShebaNumber(model.FromShebaNumber) == false || IsValidShebaNumber(model.ToShebaNumber) == false)
                 return Result.Failure(ErrorMessages.ShebaIncorrectedError);

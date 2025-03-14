@@ -16,7 +16,5 @@ namespace ACHSimulartor.Application.Interfaces
         Task<Result<TransferRequestsDetailsDto>> GetTransferRequestAsync(int id);
         Task<Result> CanceledTransferRequestAsync(int id);
         Task<Result> ConfirmedTransferRequestAsync(int id);
-         
-
     }
 }
