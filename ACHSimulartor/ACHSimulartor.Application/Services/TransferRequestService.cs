@@ -100,52 +100,52 @@ namespace ACHSimulartor.Application.Services
             return Result.Success<TransferRequestsDetailsDto>(dtoModel, SuccessMessages.ListRequestSuccessfullyDone);
         }
 
-        public async Task<Result<bool>> CanceledTransferRequestAsync(int id)
+        public async Task<Result> CanceledTransferRequestAsync(int id)
         {
             if (id == 0)
-                return Result.Failure<bool>(ErrorMessages.RequestNotFoundError);
+                return Result.Failure(ErrorMessages.RequestNotFoundError);
             var entity = await _transferRequest.GetTransferRequestByIdAsync(id);
             if (entity is null)
-                return false;
+                return Result.Failure(ErrorMessages.RequestNotFoundError);
             entity.Status = EnumStatus.canceled;
             var resultUpdate = await _transferRequest.UpdateTransferRequestStatusAsync(entity);
             if (resultUpdate is false)
-                return Result.Failure<bool>(ErrorMessages.UpdateRequestError);
+                return Result.Failure(ErrorMessages.UpdateRequestError);
 
             var resultUpdateBank = await UpdateSubFromBankAsync(entity.ToShebaNumber, entity.Price);
             if (resultUpdateBank is false)
-                return Result.Failure<bool>(ErrorMessages.UpdateBankAccountError);
+                return Result.Failure(ErrorMessages.UpdateBankAccountError);
       
                 var resultUpdateUserAccount = await RefundUserAccountAsync(entity.FromShebaNumber, entity.Price);
                 var TransactionId = await CreateRefundTransactionAsync(id, entity.FromShebaNumber, entity.Price);
                 if (TransactionId == 0)
-                    return Result.Failure<bool>(ErrorMessages.TransactionError);
+                    return Result.Failure(ErrorMessages.TransactionError);
 
-                return Result.Success<bool>(true, SuccessMessages.UpdateRequestSuccessfullyDone);
+                return Result.Success( SuccessMessages.UpdateRequestSuccessfullyDone);
 
         }
 
-        public async Task<Result<bool>> ConfirmedTransferRequestAsync(int id)
+        public async Task<Result> ConfirmedTransferRequestAsync(int id)
         {
             if (id == 0)
-                return Result.Failure<bool>(ErrorMessages.RequestNotFoundError);
+                return Result.Failure(ErrorMessages.RequestNotFoundError);
             var entity = await _transferRequest.GetTransferRequestByIdAsync(id);
             if (entity is null)
-                return false;
+                return Result.Failure(ErrorMessages.RequestNotFoundError);
             entity.Status = EnumStatus.confirmed;
             var resultUpdate = await _transferRequest.UpdateTransferRequestStatusAsync(entity);
             if (resultUpdate is false)
-                return Result.Failure<bool>(ErrorMessages.UpdateRequestError);
+                return Result.Failure(ErrorMessages.UpdateRequestError);
 
             var accountUser = await _AccountUser.GetAccountUserAsync(entity.ToShebaNumber);
             if (accountUser is null)
-                return false;
+                return Result.Failure(ErrorMessages.UserAccountNotFoundError);
             accountUser.AccountBalance = AddToAccountBalance(entity.Price,accountUser.AccountBalance);
             accountUser.BankAccountBalance = SubFromBankAccount(entity.Price,accountUser.BankAccountBalance);
                 var resultUpdateUserAccount = await _AccountUser.UpdateAccountUserAsync(accountUser);
             if(resultUpdateUserAccount is false)
-                return Result.Failure<bool>(ErrorMessages.UpdateUserAccountError);
-            return Result.Success<bool>(true, SuccessMessages.UpdateRequestSuccessfullyDone);
+                return Result.Failure(ErrorMessages.UpdateUserAccountError);
+            return Result.Success( SuccessMessages.UpdateRequestSuccessfullyDone);
         }
 
 

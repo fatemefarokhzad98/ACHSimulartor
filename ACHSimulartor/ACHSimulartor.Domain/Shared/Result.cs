@@ -8,7 +8,7 @@ namespace ACHSimulartor.Domain.Shared
 {
     public class Result
     {
-        protected internal Result(bool isSuccess, string? msessage = null)
+        protected internal Result(bool isSuccess, string? msessage)
         {
             IsSuccess = isSuccess;
             Message = msessage;

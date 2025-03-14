@@ -14,8 +14,8 @@ namespace ACHSimulartor.Application.Interfaces
         Task<Result> CreateTransferRequestAsync(CreateTransferRequestDto model);
         Task<Result<List<TransferRequestsDto>>> GetAllTransferRequestsAsync();
         Task<Result<TransferRequestsDetailsDto>> GetTransferRequestAsync(int id);
-        Task<Result<bool>> CanceledTransferRequestAsync(int id);
-        Task<Result<bool>> ConfirmedTransferRequestAsync(int id);
+        Task<Result> CanceledTransferRequestAsync(int id);
+        Task<Result> ConfirmedTransferRequestAsync(int id);
          
 
     }

@@ -13,6 +13,9 @@ namespace ACHSimulartor.Domain.Shared
         public const string ValidationSuccessfullyDone = "Validation Create TransferRequest SuccessfullyDone";
         public const string ListRequestSuccessfullyDone = "Get All Request SuccessfullyDone";
         public const string UpdateRequestSuccessfullyDone = " Update Request Status SuccessfullyDone";
+        public const string CancledRequestSuccessfullyDone = " CancledRequest SuccessfullyDone";
+        public const string ConfirmedRequestSuccessfullyDone = " ConfirmedRequest SuccessfullyDone";
+        public const string GetRequestSuccessfullyDone = " GetRequest SuccessfullyDone";
 
     }
     public static class ErrorMessages
@@ -26,12 +29,14 @@ namespace ACHSimulartor.Domain.Shared
         public const string ShebaIncorrectedError = "The ShebaNmber Incorrected";
         public const string BankNotFoundError = "The Bank NotFound";
         public const string UserAccountNotFoundError = "UserAccount NotFound";
-        public const string BadRequestError = "RequestNotFound";
+        public const string BadRequestError = "Request Invalid";
         public const string RequestNotFoundError = "No Request Found";
         public const string UpdateRequestError = "Update TransferRequest Status Failed";
         public const string UpdateUserAccountError = "Update UserAccount  Failed";
         public const string UpdateBankAccountError = "Update BankAccount  Failed";
         public const string TransactionError = "Create Transaction  Failed";
         public const string ReservtionError = "BankResertion is   Failed";
+        public const string CancledRequestError = "CancledRequest is   Failed";
+        public const string ConfirmedRequestError = "ConfirmedRequest is   Failed";
     }
 }
