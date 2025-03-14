@@ -1,4 +1,5 @@
-﻿using ACHSimulartor.Domain.Entites;
+﻿using ACHSimulartor.Data.Seeds;
+using ACHSimulartor.Domain.Entites;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -96,7 +97,7 @@ namespace ACHSimulartor.Data.Context
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
             #endregion
-
+            modelBuilder.Seed();
             base.OnModelCreating(modelBuilder);
         }
 

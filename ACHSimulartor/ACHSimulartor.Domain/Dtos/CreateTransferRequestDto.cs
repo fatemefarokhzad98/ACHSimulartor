@@ -14,10 +14,10 @@ namespace ACHSimulartor.Domain.Dtos
         [Required]
         public decimal Price { get; set; }
         [Required]
-        [RegularExpression(@"IR[0-9]{24}")]
+        [RegularExpression(@"^IR\d{24}")]
         public string FromShebaNumber { get; set; }
         [Required]
-        [RegularExpression(@"IR[0-9]{24}")]
+        [RegularExpression(@"^IR\d{24}")]
         public string ToShebaNumber { get; set; }
         [Required]
         [DataType(DataType.Text)]

@@ -8,26 +8,13 @@ namespace ACHSimulartor.Application.Services
 {
     public class TransferRequestService(ITransferRequestRepository _transferRequest, IUserRepository _AccountUser, ITransactionRepository _transaction) : ITransferRequestService
     {
-        public async Task<Result> CreateTransferRequestAsync(CreateTransferRequestDto model)
+        public async Task<Result<TransferRequestsDto>> CreateTransferRequestAsync(CreateTransferRequestDto model)
         {
             #region Validation
             var validation = await ValidationCreateTransferRequest(model);
             if (validation.IsFailure)
-                return validation;
+            return Result.Failure<TransferRequestsDto>(ErrorMessages.BadRequestError);
             #endregion
-
-            #region UpdateAccountUser  
-            var ResultUpdateAccountUser = await DepreciationAccountUserAsync(model.FromShebaNumber, model.Price);
-            if (ResultUpdateAccountUser.IsFailure)
-                return ResultUpdateAccountUser;
-            #endregion
-
-            #region Bank Reservtion 
-            var resultReservtionBank = await ReservationToBankAccount(model.ToShebaNumber, model.Price);
-            if (resultReservtionBank is false)
-                return Result.Failure(ErrorMessages.ReservtionError);
-            #endregion
-
             #region CreateTransferRequest
             EntityUsing.TransferRequest entity = new()
             {
@@ -36,20 +23,45 @@ namespace ACHSimulartor.Application.Services
                 Note = model.Note,
                 Price = model.Price,
                 ToShebaNumber = model.ToShebaNumber,
-                Status = EnumStatus.pending
+                Status = EnumStatus.pending,
+                UserShebaNumber = model.FromShebaNumber
             };
             var resultCreateTransferRequest = await _transferRequest.CreateTransferRequestAsync(entity);
             if (resultCreateTransferRequest < 1)
-                return Result.Failure(ErrorMessages.OperationFailedError);
+                return Result.Failure<TransferRequestsDto>(ErrorMessages.OperationFailedError);
             #endregion
+            #region UpdateAccountUser  
+            var ResultUpdateAccountUser = await DepreciationAccountUserAsync(model.FromShebaNumber, model.Price);
+            if (ResultUpdateAccountUser.IsFailure)
+                return Result.Failure<TransferRequestsDto>(ErrorMessages.UpdateUserAccountError);
+            #endregion
+
+            #region Bank Reservtion 
+            var resultReservtionBank = await ReservationToBankAccount(model.ToShebaNumber, model.Price);
+            if (resultReservtionBank is false)
+                return Result.Failure<TransferRequestsDto>(ErrorMessages.ReservtionError);
+            #endregion
+
+
 
             #region AddTransaction
             var TransactionId = await CreateDepreciationTransactionAsync(resultCreateTransferRequest, model.FromShebaNumber, model.Price);
             if (TransactionId == 0)
-                return Result.Failure(ErrorMessages.TransactionError);
+                return Result.Failure<TransferRequestsDto>(ErrorMessages.TransactionError);
             #endregion
+            TransferRequestsDto dto = new()
+            {
+                CreatedAt = entity.CreatedAt,
+                Id = resultCreateTransferRequest,
+                FromShebaNumber = entity.FromShebaNumber,
+                Note = entity.Note,
+                Price = entity.Price,
+                Status = entity.Status,
+                ToShebaNumber = entity.ToShebaNumber
 
-            return Result.Success(SuccessMessages.SuccessfullyDone);
+
+            };
+            return Result.Success<TransferRequestsDto>(dto, SuccessMessages.SuccessfullyDone);
 
         }
 
@@ -88,7 +100,7 @@ namespace ACHSimulartor.Application.Services
                 Price = entity.Price,
                 ToShebaNumber = entity.ToShebaNumber
             };
-            return Result.Success<TransferRequestsDetailsDto>(dtoModel, SuccessMessages.ListRequestSuccessfullyDone);
+            return Result.Success<TransferRequestsDetailsDto>(dtoModel, SuccessMessages.GetRequestSuccessfullyDone);
         }
 
         public async Task<Result> CanceledTransferRequestAsync(int id)
@@ -106,13 +118,13 @@ namespace ACHSimulartor.Application.Services
             var resultUpdateBank = await UpdateSubFromBankAsync(entity.ToShebaNumber, entity.Price);
             if (resultUpdateBank is false)
                 return Result.Failure(ErrorMessages.UpdateBankAccountError);
-      
-                var resultUpdateUserAccount = await RefundUserAccountAsync(entity.FromShebaNumber, entity.Price);
-                var TransactionId = await CreateRefundTransactionAsync(id, entity.FromShebaNumber, entity.Price);
-                if (TransactionId == 0)
-                    return Result.Failure(ErrorMessages.TransactionError);
 
-                return Result.Success( SuccessMessages.UpdateRequestSuccessfullyDone);
+            var resultUpdateUserAccount = await RefundUserAccountAsync(entity.FromShebaNumber, entity.Price);
+            var TransactionId = await CreateRefundTransactionAsync(id, entity.FromShebaNumber, entity.Price);
+            if (TransactionId == 0)
+                return Result.Failure(ErrorMessages.TransactionError);
+
+            return Result.Success(SuccessMessages.UpdateRequestSuccessfullyDone);
 
         }
 
@@ -131,19 +143,20 @@ namespace ACHSimulartor.Application.Services
             var accountUser = await _AccountUser.GetAccountUserAsync(entity.ToShebaNumber);
             if (accountUser is null)
                 return Result.Failure(ErrorMessages.UserAccountNotFoundError);
-            accountUser.AccountBalance = AddToAccountBalance(entity.Price,accountUser.AccountBalance);
-            accountUser.BankAccountBalance = SubFromBankAccount(entity.Price,accountUser.BankAccountBalance);
-                var resultUpdateUserAccount = await _AccountUser.UpdateAccountUserAsync(accountUser);
-            if(resultUpdateUserAccount is false)
+            accountUser.AccountBalance = AddToAccountBalance(entity.Price, accountUser.AccountBalance);
+            accountUser.BankAccountBalance = SubFromBankAccount(entity.Price, accountUser.BankAccountBalance);
+            var resultUpdateUserAccount = await _AccountUser.UpdateAccountUserAsync(accountUser);
+            if (resultUpdateUserAccount is false)
                 return Result.Failure(ErrorMessages.UpdateUserAccountError);
-            return Result.Success( SuccessMessages.UpdateRequestSuccessfullyDone);
+            return Result.Success(SuccessMessages.UpdateRequestSuccessfullyDone);
         }
 
 
         #region Private Method
         private bool IsValidShebaNumber(string shebaNumber)
         {
-            if (shebaNumber.StartsWith("IR") && shebaNumber.Length == 26)
+            var start = shebaNumber.Substring(0, 2);
+            if (start == "IR" && shebaNumber.Length == 26)
             {
                 var numericPart = shebaNumber.Substring(2);
                 if (numericPart.All(char.IsDigit))
@@ -161,6 +174,7 @@ namespace ACHSimulartor.Application.Services
                 TransactionType = EnumTransaction.Depreciation,
                 TransferRequestId = requestId,
                 UserShebaNumber = shebaNumber
+
             };
             var resultCreatetransaction = await _transaction.CreateTransactionAsync(transaction);
             return resultCreatetransaction;
@@ -205,7 +219,7 @@ namespace ACHSimulartor.Application.Services
         {
             if (model is null)
                 return Result.Failure(ErrorMessages.BadRequestError);
-         if(model.Price ==0)
+            if (model.Price == 0)
                 return Result.Failure(ErrorMessages.BadRequestError);
             if (IsValidShebaNumber(model.FromShebaNumber) == false || IsValidShebaNumber(model.ToShebaNumber) == false)
                 return Result.Failure(ErrorMessages.ShebaIncorrectedError);

@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/TransferRequest/GetList": {
+    "/api/TransferRequest": {
       "get": {
         "tags": [
           "TransferRequest"
@@ -15,9 +15,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/TransferRequest/Csreate": {
+      },
       "post": {
         "tags": [
           "TransferRequest"
@@ -48,15 +46,16 @@
         }
       }
     },
-    "/api/TransferRequest/CancledTransfer": {
-      "get": {
+    "/cancel/{id}": {
+      "put": {
         "tags": [
           "TransferRequest"
         ],
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -70,15 +69,16 @@
         }
       }
     },
-    "/api/TransferRequest/ConfirmedTransfer": {
-      "get": {
+    "/confirm/{id}": {
+      "put": {
         "tags": [
           "TransferRequest"
         ],
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -92,7 +92,7 @@
         }
       }
     },
-    "/api/TransferRequest/GetRequest": {
+    "/{id}": {
       "get": {
         "tags": [
           "TransferRequest"
@@ -100,7 +100,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -132,12 +133,10 @@
           },
           "fromShebaNumber": {
             "minLength": 1,
-            "pattern": "IR[0-9]{24}",
             "type": "string"
           },
           "toShebaNumber": {
             "minLength": 1,
-            "pattern": "IR[0-9]{24}",
             "type": "string"
           },
           "note": {

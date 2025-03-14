@@ -14,8 +14,6 @@ namespace ACHSimulartor.Data.Repositories
         public async Task<int> CreateTransactionAsync(Transaction model)
         {
            await _context.Transactions.AddAsync(model);
-            if (model.Id == 0)
-                return 0;
             await _context.SaveChangesAsync();
             return model.Id;
         }

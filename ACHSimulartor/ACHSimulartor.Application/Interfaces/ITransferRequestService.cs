@@ -11,7 +11,7 @@ namespace ACHSimulartor.Application.Interfaces
 {
     public interface ITransferRequestService
     {
-        Task<Result> CreateTransferRequestAsync(CreateTransferRequestDto model);
+        Task<Result<TransferRequestsDto>> CreateTransferRequestAsync(CreateTransferRequestDto model);
         Task<Result<List<TransferRequestsDto>>> GetAllTransferRequestsAsync();
         Task<Result<TransferRequestsDetailsDto>> GetTransferRequestAsync(int id);
         Task<Result> CanceledTransferRequestAsync(int id);

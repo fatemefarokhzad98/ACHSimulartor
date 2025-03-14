@@ -17,7 +17,7 @@ namespace ACHSimulartor.Domain.Entites
         public string FromShebaNumber { get; set; }
         public string ToShebaNumber { get; set; } 
         public string? Note { get; set; }
-        public DateTime? CreatedAt { get; set; } = DateTime.Now;
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
         public EnumStatus Status { get; set; }
         public User User { get; set; }
         public List<Transaction> Transactions { get; set; } = [];

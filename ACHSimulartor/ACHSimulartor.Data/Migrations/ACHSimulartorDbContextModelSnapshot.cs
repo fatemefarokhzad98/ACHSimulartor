@@ -117,6 +117,20 @@ namespace ACHSimulartor.Data.Migrations
                     b.HasKey("UserShebaNumber");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            UserShebaNumber = "IR510120010000002333219753",
+                            AccountBalance = 5000m,
+                            BankAccountBalance = 50000m
+                        },
+                        new
+                        {
+                            UserShebaNumber = "IR650540126030102398779600",
+                            AccountBalance = 5000m,
+                            BankAccountBalance = 50000m
+                        });
                 });
 
             modelBuilder.Entity("ACHSimulartor.Domain.Entites.Transaction", b =>

@@ -1,8 +1,8 @@
 [
   {
     "ContainingType": "EndPoint.Api.Controllers.TransferRequestController",
-    "Method": "CancledTransfer",
-    "RelativePath": "api/TransferRequest/CancledTransfer",
+    "Method": "GetRequest",
+    "RelativePath": "{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,31 +10,25 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "EndPoint.Api.Controllers.TransferRequestController",
-    "Method": "ConfirmedTransfer",
-    "RelativePath": "api/TransferRequest/ConfirmedTransfer",
+    "Method": "GetAll",
+    "RelativePath": "api/TransferRequest",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
     "ContainingType": "EndPoint.Api.Controllers.TransferRequestController",
-    "Method": "Csreate",
-    "RelativePath": "api/TransferRequest/Csreate",
+    "Method": "Create",
+    "RelativePath": "api/TransferRequest",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -49,26 +43,32 @@
   },
   {
     "ContainingType": "EndPoint.Api.Controllers.TransferRequestController",
-    "Method": "GetList",
-    "RelativePath": "api/TransferRequest/GetList",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EndPoint.Api.Controllers.TransferRequestController",
-    "Method": "GetRequest",
-    "RelativePath": "api/TransferRequest/GetRequest",
-    "HttpMethod": "GET",
+    "Method": "CancelTransfer",
+    "RelativePath": "cancel/{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EndPoint.Api.Controllers.TransferRequestController",
+    "Method": "ConfirmTransfer",
+    "RelativePath": "confirm/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

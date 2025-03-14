@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace ACHSimulartor.Data.Migrations
 {
     /// <inheritdoc />
@@ -75,6 +77,15 @@ namespace ACHSimulartor.Data.Migrations
                         principalTable: "Users",
                         principalColumn: "UserShebaNumber",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "UserShebaNumber", "AccountBalance", "BankAccountBalance" },
+                values: new object[,]
+                {
+                    { "IR510120010000002333219753", 5000m, 50000m },
+                    { "IR650540126030102398779600", 5000m, 50000m }
                 });
 
             migrationBuilder.CreateIndex(
