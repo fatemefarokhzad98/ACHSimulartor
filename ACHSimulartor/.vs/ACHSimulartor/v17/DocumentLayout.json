@@ -11,12 +11,28 @@
       "RelativeMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|solutionrelative:achsimulartor.domain\\shared\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE83216F-4022-4F96-A921-DB4F933E30E3}|ACHSimulartor.Data\\ACHSimulartor.Data.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.data\\repositories\\accountuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE83216F-4022-4F96-A921-DB4F933E30E3}|ACHSimulartor.Data\\ACHSimulartor.Data.csproj|solutionrelative:achsimulartor.data\\repositories\\accountuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EC40B594-6117-4EEE-B01F-FF5F82F80783}|ACHSimulartor.Application\\ACHSimulartor.Application.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.application\\interfaces\\itransferrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC40B594-6117-4EEE-B01F-FF5F82F80783}|ACHSimulartor.Application\\ACHSimulartor.Application.csproj|solutionrelative:achsimulartor.application\\interfaces\\itransferrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.domain\\entites\\transferrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|solutionrelative:achsimulartor.domain\\entites\\transferrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.domain\\dtos\\transferrequestsdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|solutionrelative:achsimulartor.domain\\dtos\\transferrequestsdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.domain\\dtos\\transferrequestresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|solutionrelative:achsimulartor.domain\\dtos\\transferrequestresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.domain\\dtos\\createtransferrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|solutionrelative:achsimulartor.domain\\dtos\\createtransferrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE83216F-4022-4F96-A921-DB4F933E30E3}|ACHSimulartor.Data\\ACHSimulartor.Data.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.data\\repositories\\accountuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE83216F-4022-4F96-A921-DB4F933E30E3}|ACHSimulartor.Data\\ACHSimulartor.Data.csproj|solutionrelative:achsimulartor.data\\repositories\\accountuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE83216F-4022-4F96-A921-DB4F933E30E3}|ACHSimulartor.Data\\ACHSimulartor.Data.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.data\\repositories\\bankrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,14 +55,6 @@
       "RelativeMoniker": "D:0:0:{CE83216F-4022-4F96-A921-DB4F933E30E3}|ACHSimulartor.Data\\ACHSimulartor.Data.csproj|solutionrelative:achsimulartor.data\\repositories\\transferrequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.domain\\entites\\transferrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|solutionrelative:achsimulartor.domain\\entites\\transferrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.domain\\dtos\\transferrequestresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|solutionrelative:achsimulartor.domain\\dtos\\transferrequestresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.domain\\enums\\enumbankname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|solutionrelative:achsimulartor.domain\\enums\\enumbankname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -57,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.domain\\enums\\enumtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|solutionrelative:achsimulartor.domain\\enums\\enumtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC40B594-6117-4EEE-B01F-FF5F82F80783}|ACHSimulartor.Application\\ACHSimulartor.Application.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.application\\interfaces\\itransferrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC40B594-6117-4EEE-B01F-FF5F82F80783}|ACHSimulartor.Application\\ACHSimulartor.Application.csproj|solutionrelative:achsimulartor.application\\interfaces\\itransferrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BA114D2-6FC2-421B-8423-C61BC19EEC2A}|ACHSimulartor.Domain\\ACHSimulartor.Domain.csproj|c:\\users\\sarayetell\\desktop\\achsimulartor\\achsimulartor\\achsimulartor.domain\\interfaces\\iaccountuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -125,13 +129,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "TransferRequest.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Entites\\TransferRequest.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Entites\\TransferRequest.cs",
               "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Entites\\TransferRequest.cs",
               "RelativeToolTip": "ACHSimulartor.Domain\\Entites\\TransferRequest.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAkwA0AAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T14:51:34.874Z",
               "IsPinned": true,
@@ -139,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Bank.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Entites\\Bank.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Entites\\Bank.cs",
@@ -159,7 +163,7 @@
               "RelativeDocumentMoniker": "ACHSimulartor.Application\\Services\\TransferRequestService.cs",
               "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Application\\Services\\TransferRequestService.cs",
               "RelativeToolTip": "ACHSimulartor.Application\\Services\\TransferRequestService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAuwEgAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAQwFsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T20:03:41.459Z",
               "IsPinned": true,
@@ -167,46 +171,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AccountUser.cs",
-              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Entites\\AccountUser.cs",
-              "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Entites\\AccountUser.cs",
-              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Entites\\AccountUser.cs",
-              "RelativeToolTip": "ACHSimulartor.Domain\\Entites\\AccountUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T20:32:20.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "BankRepository.cs",
-              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\Repositories\\BankRepository.cs",
-              "RelativeDocumentMoniker": "ACHSimulartor.Data\\Repositories\\BankRepository.cs",
-              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\Repositories\\BankRepository.cs",
-              "RelativeToolTip": "ACHSimulartor.Data\\Repositories\\BankRepository.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAswBMAAAAqAAAAAAAAAA==",
+              "Title": "TransferRequestsDetailsDto.cs",
+              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Dtos\\TransferRequestsDetailsDto.cs",
+              "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Dtos\\TransferRequestsDetailsDto.cs",
+              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Dtos\\TransferRequestsDetailsDto.cs",
+              "RelativeToolTip": "ACHSimulartor.Domain\\Dtos\\TransferRequestsDetailsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T23:53:56.1Z",
+              "WhenOpened": "2025-03-14T01:59:12.283Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IBankRepository.cs",
-              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Interfaces\\IBankRepository.cs",
-              "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Interfaces\\IBankRepository.cs",
-              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Interfaces\\IBankRepository.cs",
-              "RelativeToolTip": "ACHSimulartor.Domain\\Interfaces\\IBankRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T23:54:21.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "CreateTransferRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Dtos\\CreateTransferRequestDto.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Dtos\\CreateTransferRequestDto.cs",
@@ -219,7 +197,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TransferRequestResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Dtos\\TransferRequestResponseDto.cs",
+              "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Dtos\\TransferRequestResponseDto.cs",
+              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Dtos\\TransferRequestResponseDto.cs",
+              "RelativeToolTip": "ACHSimulartor.Domain\\Dtos\\TransferRequestResponseDto.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T19:16:13.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ITransferRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Application\\Interfaces\\ITransferRequestService.cs",
+              "RelativeDocumentMoniker": "ACHSimulartor.Application\\Interfaces\\ITransferRequestService.cs",
+              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Application\\Interfaces\\ITransferRequestService.cs",
+              "RelativeToolTip": "ACHSimulartor.Application\\Interfaces\\ITransferRequestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T20:03:14.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Messages.cs",
+              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Shared\\Messages.cs",
+              "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Shared\\Messages.cs",
+              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Shared\\Messages.cs",
+              "RelativeToolTip": "ACHSimulartor.Domain\\Shared\\Messages.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAewBAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T16:55:55.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "AccountUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\Repositories\\AccountUserRepository.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Data\\Repositories\\AccountUserRepository.cs",
@@ -232,20 +249,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Messages.cs",
-              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Shared\\Messages.cs",
-              "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Shared\\Messages.cs",
-              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Shared\\Messages.cs",
-              "RelativeToolTip": "ACHSimulartor.Domain\\Shared\\Messages.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "BankRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\Repositories\\BankRepository.cs",
+              "RelativeDocumentMoniker": "ACHSimulartor.Data\\Repositories\\BankRepository.cs",
+              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\Repositories\\BankRepository.cs",
+              "RelativeToolTip": "ACHSimulartor.Data\\Repositories\\BankRepository.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswBMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T16:55:55.607Z",
+              "WhenOpened": "2025-03-13T23:53:56.1Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
+              "Title": "IBankRepository.cs",
+              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Interfaces\\IBankRepository.cs",
+              "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Interfaces\\IBankRepository.cs",
+              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Interfaces\\IBankRepository.cs",
+              "RelativeToolTip": "ACHSimulartor.Domain\\Interfaces\\IBankRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T23:54:21.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AccountUser.cs",
+              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Entites\\AccountUser.cs",
+              "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Entites\\AccountUser.cs",
+              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Entites\\AccountUser.cs",
+              "RelativeToolTip": "ACHSimulartor.Domain\\Entites\\AccountUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T20:32:20.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "TransferRequestRepository.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Data\\Repositories\\TransferRequestRepository.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Data\\Repositories\\TransferRequestRepository.cs",
@@ -258,20 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TransferRequestResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Dtos\\TransferRequestResponseDto.cs",
-              "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Dtos\\TransferRequestResponseDto.cs",
-              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Dtos\\TransferRequestResponseDto.cs",
-              "RelativeToolTip": "ACHSimulartor.Domain\\Dtos\\TransferRequestResponseDto.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAkwA4AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T19:16:13.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "EnumBankName.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Enums\\EnumBankName.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Enums\\EnumBankName.cs",
@@ -284,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "EnumTransaction.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Enums\\EnumTransaction.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Enums\\EnumTransaction.cs",
@@ -297,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "EnumStaus.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Enums\\EnumStaus.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Enums\\EnumStaus.cs",
@@ -310,20 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ITransferRequestService.cs",
-              "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Application\\Interfaces\\ITransferRequestService.cs",
-              "RelativeDocumentMoniker": "ACHSimulartor.Application\\Interfaces\\ITransferRequestService.cs",
-              "ToolTip": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Application\\Interfaces\\ITransferRequestService.cs",
-              "RelativeToolTip": "ACHSimulartor.Application\\Interfaces\\ITransferRequestService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T20:03:14.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "IAccountUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Interfaces\\IAccountUserRepository.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Interfaces\\IAccountUserRepository.cs",
@@ -336,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Result.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Shared\\Result.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Shared\\Result.cs",
@@ -349,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ITransferRequestRepository.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Interfaces\\ITransferRequestRepository.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Interfaces\\ITransferRequestRepository.cs",
@@ -362,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "UpdateTransferRequestStatusDto.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Dtos\\UpdateTransferRequestStatusDto.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Dtos\\UpdateTransferRequestStatusDto.cs",
@@ -375,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "TransferRequestsDto.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Dtos\\TransferRequestsDto.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Dtos\\TransferRequestsDto.cs",
@@ -388,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "ResultT.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Domain\\Shared\\ResultT.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Domain\\Shared\\ResultT.cs",
@@ -401,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "HostingExtension.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.EndPoint\\EndPoint.Api\\Extentions\\HostingExtension.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.EndPoint\\EndPoint.Api\\Extentions\\HostingExtension.cs",
@@ -414,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "ACHSimulartor.Ioc",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Ioc\\ACHSimulartor.Ioc.csproj",
               "RelativeDocumentMoniker": "ACHSimulartor.Ioc\\ACHSimulartor.Ioc.csproj",
@@ -427,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.EndPoint\\EndPoint.Api\\Program.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.EndPoint\\EndPoint.Api\\Program.cs",
@@ -440,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "DependencyContainer.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.Ioc\\DependencyContainer.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.Ioc\\DependencyContainer.cs",
@@ -453,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "EndPoint.Mvc",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.EndPoint\\EndPoint.Mvc\\EndPoint.Mvc.csproj",
               "RelativeDocumentMoniker": "ACHSimulartor.EndPoint\\EndPoint.Mvc\\EndPoint.Mvc.csproj",
@@ -466,7 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "AccountService.cs",
               "DocumentMoniker": "E:\\ContactBook\\NITC-Contact.Application\\Services\\AccountService.cs",
               "ToolTip": "E:\\ContactBook\\NITC-Contact.Application\\Services\\AccountService.cs",
@@ -477,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\SarayeTell\\Desktop\\ACHSimulartor\\ACHSimulartor\\ACHSimulartor.EndPoint\\EndPoint.Mvc\\Program.cs",
               "RelativeDocumentMoniker": "ACHSimulartor.EndPoint\\EndPoint.Mvc\\Program.cs",

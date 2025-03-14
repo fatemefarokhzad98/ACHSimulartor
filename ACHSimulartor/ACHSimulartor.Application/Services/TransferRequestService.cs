@@ -13,7 +13,7 @@ using System.Transactions;
 
 namespace ACHSimulartor.Application.Services
 {
-    public class TransferRequestService(ITransferRequestRepository _transferRequest, IAccountUserRepository _accountUser,IBankRepository _bank) : ITransferRequestService
+    public class TransferRequestService(ITransferRequestRepository _transferRequest, IAccountUserRepository _accountUser, IBankRepository _bank) : ITransferRequestService
     {
         public async Task<Result> CreateTransferRequestAsync(CreateTransferRequestDto model)
         {
@@ -76,15 +76,39 @@ namespace ACHSimulartor.Application.Services
             return Result.Success<List<TransferRequestsDto>>(dtoList,SuccessMessages.ListRequestSuccessfullyDone);
         }
 
-        public Task<Result<TransferRequestsDto>> GetTransferRequestAsync(int id)
+        public async Task<Result<TransferRequestsDetailsDto>> GetTransferRequestAsync(int id)
         {
-            throw new NotImplementedException();
+            var entity = await _transferRequest.GetTransferRequestByIdAsync(id);
+            #region Validation
+            if (entity is null )
+                return Result.Failure<TransferRequestsDetailsDto>(ErrorMessages.RequestNotFound);
+            #endregion
+            TransferRequestsDetailsDto dtoModel = new()
+            {
+                Id = entity.Id,
+                FromShebaNumber = entity.FromShebaNumber,
+                Price = entity.Price,
+                ToShebaNumber = entity.ToShebaNumber
+            };
+            return Result.Success<TransferRequestsDetailsDto>(dtoModel, SuccessMessages.ListRequestSuccessfullyDone);
         }
-
+           
         public Task<Result> UpdateTransferRequestAsync(UpdateTransferRequestStatusDto model)
         {
             throw new NotImplementedException();
         }
+        public Task<Result<TransferRequestsDto>> CanceledTransferRequestAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Result<TransferRequestsDto>> ConfirmedTransferRequestAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        #region Private Method
         private bool IsValidShebaNumber(string shebaNumber)
         {
             if (shebaNumber.StartsWith("IR") && shebaNumber.Length == 26)
@@ -92,7 +116,7 @@ namespace ACHSimulartor.Application.Services
                 var numericPart = shebaNumber.Substring(2);
                 if (numericPart.All(char.IsDigit))
                 {
-                    return true; 
+                    return true;
                 }
             }
             return false;
@@ -109,7 +133,7 @@ namespace ACHSimulartor.Application.Services
         }
         private int GetBankCodeByShebaNubmer(string shebaNumber)
         {
-            if (shebaNumber.Length==26)
+            if (shebaNumber.Length == 26)
             {
                 var bankCode = shebaNumber.Substring(4, 3);
                 return Convert.ToInt32(bankCode);
@@ -132,7 +156,7 @@ namespace ACHSimulartor.Application.Services
                 return Result.Failure(ErrorMessages.InsufficientInventoryError);
             return Result.Success(SuccessMessages.ValidationSuccessfullyDone);
         }
-        private async Task<Result> UpdateUserAccountAsync(string shebaNumber,decimal price)
+        private async Task<Result> UpdateUserAccountAsync(string shebaNumber, decimal price)
         {
             var accountUser = await _accountUser.GetAccountUserByShebaNumber(shebaNumber);
             if (accountUser is null)
@@ -144,7 +168,7 @@ namespace ACHSimulartor.Application.Services
                 return Result.Failure(ErrorMessages.DepreciationFailedError);
             return Result.Success(SuccessMessages.UpdateUserAccountSuccessfullyDone);
         }
-        private async Task<Result<int>> UpdateBankAsync(string shebaNumber,decimal price)
+        private async Task<Result<int>> UpdateBankAsync(string shebaNumber, decimal price)
         {
             var bankCode = GetBankCodeByShebaNubmer(shebaNumber);
             if (bankCode == 0)
@@ -158,5 +182,9 @@ namespace ACHSimulartor.Application.Services
                 return Result.Failure<int>(ErrorMessages.UnspecifiedTransaction);
             return bankCode;
         }
+        #endregion
+
+
+
     } 
 }
