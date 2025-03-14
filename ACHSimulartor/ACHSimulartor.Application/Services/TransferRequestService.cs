@@ -121,7 +121,7 @@ namespace ACHSimulartor.Application.Services
             var accountUser = await _accountUser.GetAccountUserByShebaNumber(shebaNumber);
             if (accountUser is null)
                 return Result.Failure(ErrorMessages.UserAccountNotFound);
-            accountUser.AccountBalanc = SubFromAccountBalance(price, accountUser.AccountBalanc);
+            accountUser.AccountBalance = SubFromAccountBalance(price, accountUser.AccountBalance);
             accountUser.Transaction = EnumTransaction.Depreciation;
             var accountUserResult = await _accountUser.UpdateAccountUserAsync(accountUser);
             if (accountUserResult is false)
@@ -136,7 +136,7 @@ namespace ACHSimulartor.Application.Services
             var bankEntity = await _bank.GetBankByBankCodeAsync(bankCode);
             if (bankEntity is null)
                 return Result.Failure<int>(ErrorMessages.BankNotFound);
-            bankEntity.BankAccountBalanc = ReservationToBankAccount(price, bankEntity.BankAccountBalanc);
+            bankEntity.BankAccountBalance = ReservationToBankAccount(price, bankEntity.BankAccountBalance);
             var resultReservationBank = await _bank.UpdateBankAccountBalanceAsync(bankEntity);
             if (resultReservationBank == false)
                 return Result.Failure<int>(ErrorMessages.UnspecifiedTransaction);

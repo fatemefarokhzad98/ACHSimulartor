@@ -22,7 +22,7 @@ namespace ACHSimulartor.Data.Repositories
             var entity = await _context.Banks.Where(x => x.BankCode == model.BankCode).FirstOrDefaultAsync();
             if (entity is null)
                 return false;
-            entity.BankAccountBalanc = model.BankAccountBalanc;
+            entity.BankAccountBalance = model.BankAccountBalance;
             _context.Banks.Update(entity);
             await _context.SaveChangesAsync();
             return true;

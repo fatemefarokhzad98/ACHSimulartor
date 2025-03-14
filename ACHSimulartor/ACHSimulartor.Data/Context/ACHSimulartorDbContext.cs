@@ -38,6 +38,7 @@ namespace ACHSimulartor.Data.Context
 
             modelBuilder.Entity<TransferRequest>()
             .Property(b => b.Price)
+             .HasColumnType("decimal(18, 2)")
              .IsRequired();
             modelBuilder.Entity<TransferRequest>()
             .Property(b => b.Note)
@@ -52,8 +53,9 @@ namespace ACHSimulartor.Data.Context
            .IsRequired()
            .HasMaxLength(26);
             modelBuilder.Entity<AccountUser>()
-            .Property(b => b.AccountBalanc)
-           .HasDefaultValue(0);
+            .Property(b => b.AccountBalance)
+            .HasColumnType("decimal(18, 2)")
+            .HasDefaultValue(0);
 
             #endregion
             #region Bank
@@ -64,7 +66,8 @@ namespace ACHSimulartor.Data.Context
            .HasMaxLength(3)
            .IsRequired();
             modelBuilder.Entity<Bank>()
-            .Property(x => x.BankAccountBalanc)
+            .Property(x => x.BankAccountBalance)
+            .HasColumnType("decimal(18, 2)")
             .HasDefaultValue(0);
            
             #endregion

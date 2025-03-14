@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ACHSimulartor.Data.Migrations
 {
     [DbContext(typeof(ACHSimulartorDbContext))]
-    [Migration("20250313210322_AddAccountUser")]
-    partial class AddAccountUser
+    [Migration("20250314011526_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,8 +31,10 @@ namespace ACHSimulartor.Data.Migrations
                         .HasMaxLength(26)
                         .HasColumnType("nvarchar(26)");
 
-                    b.Property<decimal>("AccountBalanc")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<decimal>("AccountBalance")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(18, 2)")
+                        .HasDefaultValue(0m);
 
                     b.Property<int>("Transaction")
                         .HasColumnType("int");
@@ -40,6 +42,25 @@ namespace ACHSimulartor.Data.Migrations
                     b.HasKey("ShebaNumber");
 
                     b.ToTable("AccountUsers");
+                });
+
+            modelBuilder.Entity("ACHSimulartor.Domain.Entites.Bank", b =>
+                {
+                    b.Property<int>("BankCode")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(3)
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BankCode"));
+
+                    b.Property<decimal>("BankAccountBalance")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(18, 2)")
+                        .HasDefaultValue(0m);
+
+                    b.HasKey("BankCode");
+
+                    b.ToTable("Banks");
                 });
 
             modelBuilder.Entity("ACHSimulartor.Domain.Entites.TransferRequest", b =>
@@ -50,6 +71,9 @@ namespace ACHSimulartor.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("BankCode")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -59,10 +83,11 @@ namespace ACHSimulartor.Data.Migrations
                         .HasColumnType("nvarchar(26)");
 
                     b.Property<string>("Note")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<int?>("Staus")
                         .HasColumnType("int");
@@ -74,6 +99,8 @@ namespace ACHSimulartor.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BankCode");
+
                     b.HasIndex("FromShebaNumber");
 
                     b.ToTable("TransferRequests");
@@ -81,6 +108,12 @@ namespace ACHSimulartor.Data.Migrations
 
             modelBuilder.Entity("ACHSimulartor.Domain.Entites.TransferRequest", b =>
                 {
+                    b.HasOne("ACHSimulartor.Domain.Entites.Bank", "Bank")
+                        .WithMany("TransferRequests")
+                        .HasForeignKey("BankCode")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ACHSimulartor.Domain.Entites.AccountUser", "AccountUser")
                         .WithMany("TransferRequests")
                         .HasForeignKey("FromShebaNumber")
@@ -88,9 +121,16 @@ namespace ACHSimulartor.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("AccountUser");
+
+                    b.Navigation("Bank");
                 });
 
             modelBuilder.Entity("ACHSimulartor.Domain.Entites.AccountUser", b =>
+                {
+                    b.Navigation("TransferRequests");
+                });
+
+            modelBuilder.Entity("ACHSimulartor.Domain.Entites.Bank", b =>
                 {
                     b.Navigation("TransferRequests");
                 });

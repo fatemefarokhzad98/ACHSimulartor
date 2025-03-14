@@ -10,7 +10,7 @@ namespace ACHSimulartor.Domain.Entites
    public class AccountUser
     {
         public string ShebaNumber { get; set; }
-        public decimal AccountBalanc { get; set; }
+        public decimal AccountBalance { get; set; }
         public EnumTransaction Transaction { get; set; }
         public List<TransferRequest> TransferRequests { get; set; }
     }

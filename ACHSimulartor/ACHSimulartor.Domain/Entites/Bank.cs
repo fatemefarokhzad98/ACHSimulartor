@@ -10,7 +10,7 @@ namespace ACHSimulartor.Domain.Entites
     public class Bank
     {
         public int BankCode { get; set; }
-        public decimal BankAccountBalanc { get; set; }
+        public decimal BankAccountBalance { get; set; }
         public List<TransferRequest> TransferRequests { get; set; }
 
     }

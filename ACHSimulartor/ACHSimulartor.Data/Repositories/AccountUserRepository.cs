@@ -19,7 +19,7 @@ namespace ACHSimulartor.Data.Repositories
 
         public async Task<bool> HasSufficientBalanceAsync(string shebaNo, decimal price)
         {
-            return await _context.AccountUsers.Where(x=>x.ShebaNumber==shebaNo).AnyAsync(money=>money.AccountBalanc==price ||money.AccountBalanc>price);
+            return await _context.AccountUsers.Where(x=>x.ShebaNumber==shebaNo).AnyAsync(money=>money.AccountBalance==price ||money.AccountBalance>price);
         }
 
         public async Task<bool> UpdateAccountUserAsync(AccountUser model)
@@ -28,7 +28,7 @@ namespace ACHSimulartor.Data.Repositories
             if (entity is null)
                 return false;
             entity.Transaction = model.Transaction;
-            entity.AccountBalanc = model.AccountBalanc;
+            entity.AccountBalance = model.AccountBalance;
             _context.AccountUsers.Update(entity);
             await _context.SaveChangesAsync();
             return true;
