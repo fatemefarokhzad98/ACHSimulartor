@@ -55,9 +55,25 @@ namespace ACHSimulartor.Application.Services
 
         }
 
-        public Task<Result<List<TransferRequestsDto>>> GetAllTransferRequestsAsync()
+        public async Task<Result<List<TransferRequestsDto>>> GetAllTransferRequestsAsync()
         {
-            throw new NotImplementedException();
+            var entities = await _transferRequest.GetAllTransferRequestsAsync();
+            #region Validation
+            if (entities is null || entities.Count == 0)
+                return Result.Failure<List<TransferRequestsDto>>(ErrorMessages.RequestNotFound);
+            #endregion
+            var sortedAndConditionedEntities = entities.Where(x=>x.Staus==EnumStaus.pending).OrderBy(e => e.CreatedAt);
+            var dtoList = sortedAndConditionedEntities.Select(entity => new TransferRequestsDto()
+            {
+                Id = entity.Id,
+                CreatedAt = entity.CreatedAt,
+                FromShebaNumber = entity.FromShebaNumber,
+                Note = entity.Note,
+                Price = entity.Price,
+                Staus = entity.Staus,
+                ToShebaNumber = entity.ToShebaNumber
+            }).ToList();
+            return Result.Success<List<TransferRequestsDto>>(dtoList,SuccessMessages.ListRequestSuccessfullyDone);
         }
 
         public Task<Result<TransferRequestsDto>> GetTransferRequestAsync(int id)

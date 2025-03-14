@@ -11,6 +11,7 @@ namespace ACHSimulartor.Domain.Shared
         public const string SuccessfullyDone = "Request is saved successfully and is in pending status";
         public const string UpdateUserAccountSuccessfullyDone = "Update UserAccount SuccessfullyDone";
         public const string ValidationSuccessfullyDone = "Validation Create TransferRequest SuccessfullyDone";
+        public const string ListRequestSuccessfullyDone = "Get All Request SuccessfullyDone";
 
     }
     public static class ErrorMessages
@@ -25,5 +26,6 @@ namespace ACHSimulartor.Domain.Shared
         public const string BankNotFound = "The Bank NotFound";
         public const string UserAccountNotFound = "UserAccount NotFound";
         public const string BadRequest = "RequestNotFound";
+        public const string RequestNotFound = "No Request Found";
     }
 }
